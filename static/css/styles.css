@@ -20,7 +20,6 @@ html {
     
   /*menu */
   
-  
   .nav {
       display: flex;
       justify-content: flex-end;
@@ -71,26 +70,23 @@ html {
     list-style: none;
   }
   
-  a {
+  a.nav-link {
   text-decoration: none;
   list-style: none;
   color: #2F4F4F;
   }
   
   /* headers*/
-
   
   h2 {
     font-size: 2rem;
     color: linen;
     text-align: center;
   }
-  
-  h2.linen {
-    font-size: 2rem;
+  h3 {
     color: linen;
-    text-align: center;
   }
+
   
   /*main*/
 
@@ -108,7 +104,7 @@ html {
     color: white;
   }
   
-  .about, .projects, .work, .education, .skills, .personal{
+  .about, .projects, .work, .education, .skills, .personal, .certification{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -136,4 +132,15 @@ html {
     html{
     font-size: 4rem;
     }
+  }
+
+  /*links*/
+  a#link {
+    list-style: none;
+    color: white;
+    }
+  
+    /*certification links*/
+  li#cert{
+    padding: 5px;
   }
