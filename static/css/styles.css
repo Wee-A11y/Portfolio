@@ -3,12 +3,12 @@
 }
 
 html {
-    scroll-padding-top: 70px;
-  }
+  scroll-padding-top: 70px;
+}
   
 body {
   font-size: 16px;
-  font-family: Freemono, sans-serif;
+  font-family: Trebuchet MS, sans-serif;
   text-align: center;
   display: flexbox;
   background: linear-gradient(150deg, black 60%, #001440, #047387, #FF1493);
@@ -17,27 +17,38 @@ body {
   width: 100%;
   margin: 10px;
   }
-    
 
+ul.justifyLeft{
+  display: flexbox;
+  justify-content: flex-start;
+  max-width: 800px;
+  text-align: left;
+  margin-left: 20%;
+  padding: 5px;
+}  
+
+ul.justifyLeft li {
+  padding: 10px;
+}
+    
 /*menu */
 
 .nav {
-    display: flex;
-    justify-content: flex-end;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    font-size: 1rem;
-    height: 70px;
-    font-weight: bold;
-  }
-
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 1rem;
+  height: 70px;
+  font-weight: bold;
+}
 
 ul {
-    display: block;
-    list-style-type: disc;
+  display: block;
+  list-style-type: disc;
 }
   
 .nav-list li {
@@ -60,6 +71,13 @@ text-decoration: none;
 list-style: none;
 color: #FF1493;
 font-weight: bold;
+font-size: 1.25rem;
+}
+
+nav {
+  background-color: rgba(0,0,0,.85);
+  max-height: 50px;
+  position: fixed;
 }
 
 /* headers*/
@@ -74,38 +92,67 @@ h1.name {
 
 h1.nm {
   color: #59CBE8;
-  font-size: 3.5rem;  
+  font-size: 5.5rem;  
   text-align: center;
-  margin: none;
-  padding: none;
+  font-family: Noto Sans, sans-serif;
+  margin: auto;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #06038D;
   text-align: center;
+  margin: auto;
 }
+
+h2.top {
+  margin-top: 80px;
+}
+
 h3 {
   color: #0088A3;
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+}
+
+h5 {
+  color: #FF1493;
+  font-size: 1.5rem;
+}
+
+h6 {
+  color: #FF1493;
+  font-size: 1rem;
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  margin-left: 23%;
 }
 
 /*main*/
-
-.about {
-  display: flex;
-}
   
 section#socials a{
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: white;
   justify-content: center;
 }
 
-.about, .projects, .work, .education, .skills, .personal, .certification{
+div.social-icons {
+  display: inline-block;
+  margin: 10px;
+}
+
+.about, .projects, .work, .education, .skills, .personal, .certification {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 5%;
+  padding: 10px;
   color: #F5DADF;
 }
 
@@ -125,31 +172,19 @@ section {
   text-align: center;
 }
 
-@media only screen and (max-width: 720px){
-  html{
-  font-size: 4rem;
-  }
-}
-
-#background {
-  padding-top: 70px;
-  width: 100%;
-  height: 400px;
-}
-
-section#images {
-  max-height: 500px;
-}
-
 /*links*/
-a#link {
+a.link {
   list-style: none;
   color: white;
   }
 
-  /*certification links*/
+/*certification links*/
 li#cert{
   padding: 5px;
+}
+
+a#link{
+  color:#047387;
 }
 
 img#profile {
@@ -158,5 +193,58 @@ img#profile {
   margin: auto;
 }
 
+/*Projects*/
 
-  
+div.project {
+  margin: 20px;
+}
+
+img.thumbnail {
+  max-width: 150px;
+}
+
+/*Work*/
+ul.experience li{
+  display: flex;
+  align-items: flex-start;
+  max-width: 800px;
+  text-align: left;
+  margin-left: 20%;
+  padding: 5px;
+}
+
+section#work h3 {
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  margin-left: 22%;
+  padding-top: 5px;
+}
+
+/*images*/
+
+img#profile {
+  transition: transform .7s ease-in-out;
+}
+img#profile:hover {
+  transform: rotate(360deg);
+}
+
+#background {
+  width: 100%;
+  height: 400px;
+  z-index: -1;
+}
+
+section#images {
+  max-height: 500px;
+}
+
+/*about*/
+
+div.courses {
+  display: inline-flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 20px;
+}

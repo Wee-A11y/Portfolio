@@ -22,23 +22,44 @@
               </header>
 
                 <section id="projects" class="projects">
-                    <h2>Projects</h2>
+                    <h2 class="top">Projects</h2>
 
-                    <div id="project2">
+                    <div id="project2" class="project">
                         <h3>Counter App</a></h3>
-                        <p>This <a href="https://a11y-cat.github.io/Counter-App/" class="link" id="link">app</a> allows you to count and save the increments. This can be used to count people entering a venue or building.</p>
+                        <a href="https://a11y-cat.github.io/Counter-App/" class="link" target="_blank"><img class="thumbnail" src="images/counter.png" alt="Counter App Thumbnail"></a>
+                        <h4>Tech used: HTML, CSS, Javascript</h4>
+                        <p>This app allows you to count and save the increments. This can be used to count people entering a venue or building.</p>
                     </div>
 
-                    <div class="project1">
+                    <div id="project3" class="project">
+                        <h3>Order App</h3>
+                        <a href="https://a11y-cat.github.io/OrderApp/index.html" class="link" target="_blank"><img class="thumbnail" src="images/millys.jpg" alt="Milly's Kitchen thumbnail"></a>
+                        <h4>Tech used: HTML, CSS, Javascript</h4>
+                        <p>This app is a sample order site for a cafe, this was a project for the Harvard CS50x course.</p>
+                    </div>
+
+                    <div id="project4" class="project">
+                        <h3>Chrome Extension</h3>
+                        <a href="https://github.com/A11y-Cat/ChromeExtension" class="link" target="_blank"><img class="thumbnail" src="images/extension.png" alt="extension thumbnail"></a>
+                        <h4>Tech used: HTML, CSS, Javascript</h4>
+                        <p>This is a chrome extension that allows you to add urls to your local storage in order to track leads. Please follow the instructions in the README.</p>
+                    </div>
+
+
+                    <div id="project1" class="project">
                         <h3>Power Automate</h3>
-                    <p>
-                        When I started working at the School of Management, students were required to download and print unit change request forms and bring them to the office, to request a unit change. After being introduced to Microsoft Teams, I thought it would be the perfect platform to move the unit changes online and, this could allow for data to be automatically stored in an Excel spreadsheet.</p>
-                        <p>As processing unit changes were taking up a large amount of administration time, I investigated how to automate the process further using software I could access through the University systems and found Power Automate would work best. The trigger point was a new response in the unit change form, this then sent a confirmation email to the student, which summarised their request and confirmed we have received it. Using JSON I created an adaptive card which is sent to a channel in Teams, where the administrators can view a summary of the request, respond to the student and open the spreadsheet to view more details. Using the switch function, I created various options administrators could choose to process the request the request. Once the request is processed, the student receives an email advising the outcome and the outcome, plus any additional notes from the administrators are recorded on the excel. I provided a demonstration to my team on how to use this system and created a user guide for them to follow. </p>
-                        <p>I have developed a similar process through Power Automate for the extension request process. The old process involved students emailing a word document detailing their extension request to the relevant staff members. The process was very time consuming and inefficient; information would get lost in the number of emails that were being received and the correct team members weren’t always copied into the email leading to requests being missed. I used the form as a trigger and the student received an email confirmation, with a summary of their request and advising them we were dealing with the request. This cut down the number of ‘chase’ emails we received, checking that their request had been received. </p>
-                        <p>I created a Teams channel for each course, which allowed others to be added and to access the request in case of an absence. Using the switch function, the adaptive card is sent to relevant Teams channel which a summary of the request, access to the excel for further information and a link to any evidence uploaded by the student. The request could then be processed from the channel, and a notification sent to the administrator so they could complete the final steps. The information about the request and the evidence is all stored in the excel, allowing ease of access to the information when required by the relevant teams. These changes increased agility cut down administrative processes across the School of Management Undergraduate team.</p>
+                        <h4>Tech used: Power Automate, JSON, Excel, Forms</h4>
+                        <h5>Unit Change Process</h5>
+                        <p>When I started working at the School of Management, students were required to download/print or email unit change request. I automated the process using a Microsoft form and Power Automate, this could allow for data to be automatically stored in an Excel spreadsheet.</p>
+                        <p>Processing unit changes was a time consuming task, using Power Automate to send an adaptive card to a Teams area, where the outcome email could be sent automatically, with additional notes, to students more than halved the processing time.<p>
+                        <p>Students received an automatic email confirming their choice which reduced any additional incoming messages.<p>
+                        
+                        <h5>Extension Process</h5>
+                        <p>I created a similar process for the extension requests, however this was a more complex project as each case had to be sent to different teams, I used the switch method in Power Automate to accomplish this.<p>
+                        <p>I presented my solution to the Director of Teaching, Director of Studies and programme team, my solution was implemented and has been running for over 2 years.</p>
+                        <p>This process has reduced workload and loss of information or missed requests.</p>      
                     </div>
                 </section>
-
         </body>
     </html>
 </DOCTYPE>
