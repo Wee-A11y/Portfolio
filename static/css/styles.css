@@ -1,5 +1,5 @@
 :root {
-  --darkteal(#2F4F4F)
+  --darkteal(#2F4F4F);
 }
 
 html {
@@ -7,12 +7,12 @@ html {
 }
   
 body {
-  font-size: 16px;
-  font-family: Trebuchet MS, sans-serif;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
   display: flexbox;
-  background: linear-gradient(150deg, black 60%, #001440, #047387, #FF1493);
-  color: #FFA6C9;
+  background: 	#A4BDBA;
+  color: whitesmoke;
   padding: 0;
   width: 100%;
   margin: 10px;
@@ -66,43 +66,54 @@ ul {
   list-style: none;
 }
   
-a.nav-link{
+a.nav-link {
 text-decoration: none;
 list-style: none;
-color: #FF1493;
+color: teal;
 font-weight: bold;
 font-size: 1.25rem;
 }
 
 nav {
-  background-color: rgba(0,0,0,.85);
-  max-height: 50px;
+  background-color: #F5DADF;
+  max-height: 80px;
   position: fixed;
+}
+
+#index {
+  padding: 50px;
+}
+
+#profile{
+  margin-top: 50px;
 }
 
 /* headers*/
 
-h1.name {
-  color: #59CBE8;
+h1#header.navName {
   z-index: 5;
   text-align: left;
   position: fixed;
   top: 0;
+  font-family: 'Sacramento', cursive;
+  text-decoration: none;
 }
 
-h1.nm {
-  color: #59CBE8;
-  font-size: 5.5rem;  
+h1#title {
+  color: whitesmoke;
+  font-size: 10.5rem;  
   text-align: center;
-  font-family: Noto Sans, sans-serif;
+  font-family: 'Fuggles', cursive;
   margin: auto;
+  margin-top: 50px;
 }
 
 h2 {
   font-size: 3rem;
-  color: #06038D;
+  color: white;
   text-align: center;
   margin: auto;
+  font-family: 'Montserrat', sans-serif;
 }
 
 h2.top {
@@ -121,13 +132,13 @@ h4 {
 }
 
 h5 {
-  color: #FF1493;
+  color: teal;
   font-size: 1.5rem;
 }
 
 h6 {
-  color: #FF1493;
-  font-size: 1rem;
+  color: teal;
+  font-size: 1.5rem;
   margin: auto;
   display: flex;
   align-items: flex-start;
@@ -153,7 +164,7 @@ div.social-icons {
   flex-direction: column;
   justify-content: center;
   padding: 10px;
-  color: #F5DADF;
+  color: whitesmoke;
 }
 
 section {
@@ -176,6 +187,7 @@ section {
 a.link {
   list-style: none;
   color: white;
+  text-decoration: none;
   }
 
 /*certification links*/
