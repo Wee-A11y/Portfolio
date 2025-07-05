@@ -14,17 +14,23 @@
 
         <body>
           <header>
-            <h1 id="header" class="navName"><a class="link" href="index.html">Allison McHugh</a></h1>
+            <h1 id="header" class="navName"><a class="name-link" href="index.html">Allison McHugh</a></h1>
             <nav id="navbar" class="nav">
-              <ul class="nav-list">
+              <ul class="nav-list" id="nav-list">
                 <li><a class="nav-link" href="index.html">Home</a></li>
                 <li><a class="nav-link" href="about.html">About Me</a></li>
-                <li><a class="nav-link"  href="projects.html">Projects</a></li>
+                <li><a class="nav-link" href="projects.html">Projects</a></li>
                 <li><a class="nav-link" href="certifications.html">Certifications</a></li>
               </ul>
-          </nav>
+              <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-list">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </nav>
           </header>
 
+              <a id="work"></a>
               <section id="work" class="work">
                 <h2 class="top">Work Experience</h2>
                 <div>
@@ -32,7 +38,7 @@
                   <h6 class="dates">December 2023 - Present</h6>
                   <ul class="experience">
                     <li>Developing and maintaining CMS-based websites using C#, .NET, Entity Framework, SQL Server, JavaScript, and CSS within Umbraco and Sitecore platforms.</li>
-                    <li>Lead backend developer on <a href="www.warmify.org.uk">www.warmify.org.uk</a>, collaborating closely with front-end, UX, and design teams to deliver a robust, production-ready web application.</li>
+                    <li>Lead backend developer on <a href="https://www.warmify.org.uk" target="_blank">www.warmify.org.uk</a>, collaborating closely with front-end, UX, and design teams to deliver a robust, production-ready web application.</li>
                     <li>Delivered full-stack solutions for smaller projects, including backend services and UI components, gaining experience across the software development lifecycle.</li>
                     <li>Managing client support tickets and implementing new features, bug fi xes, and enhancements with accurate time estimation and prioritisation.</li>
                     <li>Regularly contributed to code reviews, internal documentation, and team collaboration processes to ensure high code quality.</li>
@@ -100,6 +106,37 @@
                 </div>
               </section>
 
+        <script>
+          // Hamburger menu toggle
+          const hamburger = document.querySelector('.hamburger');
+          const navList = document.querySelector('.nav-list');
+          hamburger.addEventListener('click', function() {
+            navList.classList.toggle('open');
+            document.body.classList.toggle('menu-open');
+            const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !expanded);
+          });
+          // Fade-out navigation
+          document.querySelectorAll('a').forEach(link => {
+            if (
+              link.hostname === window.location.hostname &&
+              !link.href.includes('#') &&
+              link.getAttribute('target') !== '_blank'
+            ) {
+              link.addEventListener('click', function(e) {
+                if (navList.classList.contains('open')) {
+                  navList.classList.remove('open');
+                  document.body.classList.remove('menu-open');
+                }
+                e.preventDefault();
+                document.body.classList.add('fade-out');
+                setTimeout(() => {
+                  window.location = link.href;
+                }, 500);
+              });
+            }
+          });
+        </script>
         </body>
     </html>
 </DOCTYPE>

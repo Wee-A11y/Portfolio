@@ -14,83 +14,121 @@
 
         <body>
             <header>
-                <h1 id="header" class="navName"><a class="link" href="index.html">Allison McHugh</a></h1>
+                <h1 id="header" class="navName"><a class="name-link" href="index.html">Allison McHugh</a></h1>
                 <nav id="navbar" class="nav">
-                    <ul class="nav-list">
+                    <ul class="nav-list" id="nav-list">
                         <li><a class="nav-link" href="index.html">Home</a></li>
                         <li><a class="nav-link" href="about.html">About Me</a></li>
-                        <li><a class="nav-link" href="certifications.html">Certifications</a></li>
                         <li><a class="nav-link" href="work.html">Work Experience</a></li>
-                      </ul>
+                        <li><a class="nav-link" href="certifications.html">Certifications</a></li>
+                    </ul>
+                    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-list">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </nav>
-              </header>
+            </header>
 
-                <section id="projects" class="projects">
-                    <h2 class="top">Projects</h2>
+            <a id="projects"></a>
+            <section id="projects" class="projects">
+                <h2 class="top">Projects</h2>
 
-                    <div id="project" class="project">
-                        <h3>Rock Paper Scissors</a></h3>
-                        <a href="https://github.com/Wee-A11y/Rock-Paper-Scissors" class="link" target="_blank"><img class="thumbnail" src="images/RPS.png" alt="Rock Paper Scissors Thumbnail"></a>
-                        <h4>Tech used: C#, .Net 6.0</h4>
-                        <p>I created console app to learn key concepts of C#, including encapsualtion and dependency injection.</p>
-                    </div>
+                <div id="project" class="project">
+                    <h3>Rock Paper Scissors</a></h3>
+                    <a href="https://github.com/Wee-A11y/Rock-Paper-Scissors" class="link" target="_blank"><img class="thumbnail" src="images/RPS.png" alt="Rock Paper Scissors Thumbnail"></a>
+                    <h4>Tech used: C#, .Net 6.0</h4>
+                    <p>I created console app to learn key concepts of C#, including encapsualtion and dependency injection.</p>
+                </div>
 
-                    <div id="project1" class="project">
-                        <h3>Maths Game</a></h3>
-                        <a href="https://github.com/Wee-A11y/Rock-Paper-Scissors" class="link" target="_blank"><img class="thumbnail" src="images/Math.png" alt="Math App Thumbnail"></a>
-                        <h4>Tech used: C#, .Net 6.0</h4>
-                        <p>Console app. The user can select from addition, subraction, division or multiplication games to improve their maths skills</p>
-                    </div>
+                <div id="project1" class="project">
+                    <h3>Maths Game</a></h3>
+                    <a href="https://github.com/Wee-A11y/Rock-Paper-Scissors" class="link" target="_blank"><img class="thumbnail" src="images/Math.png" alt="Math App Thumbnail"></a>
+                    <h4>Tech used: C#, .Net 6.0</h4>
+                    <p>Console app. The user can select from addition, subraction, division or multiplication games to improve their maths skills</p>
+                </div>
 
-                    <div id="project2" class="project">
-                        <h3>Counter App</a></h3>
-                        <a href="https://wee-a11y.github.io/Counter-App/" class="link" target="_blank"><img class="thumbnail" src="images/counter.png" alt="Counter App Thumbnail"></a>
-                        <h4>Tech used: HTML, CSS, Javascript</h4>
-                        <p>This app allows you to count and save the increments. This can be used to count people entering a venue or building.</p>
-                    </div>
+                <div id="project2" class="project">
+                    <h3>Counter App</a></h3>
+                    <a href="https://wee-a11y.github.io/Counter-App/" class="link" target="_blank"><img class="thumbnail" src="images/counter.png" alt="Counter App Thumbnail"></a>
+                    <h4>Tech used: HTML, CSS, Javascript</h4>
+                    <p>This app allows you to count and save the increments. This can be used to count people entering a venue or building.</p>
+                </div>
 
-                    <div id="project3" class="project">
-                        <h3>Order App</h3>
-                        <a href="https://wee-a11y.github.io/OrderApp/" class="link" target="_blank"><img class="thumbnail" src="images/millys.jpg" alt="Milly's Kitchen thumbnail"></a>
-                        <h4>Tech used: HTML, CSS, Javascript</h4>
-                        <p>This app is a sample order site for a cafe, this was a project for the Harvard CS50x course.</p>
-                    </div>
+                <div id="project3" class="project">
+                    <h3>Order App</h3>
+                    <a href="https://wee-a11y.github.io/OrderApp/" class="link" target="_blank"><img class="thumbnail" src="images/millys.jpg" alt="Milly's Kitchen thumbnail"></a>
+                    <h4>Tech used: HTML, CSS, Javascript</h4>
+                    <p>This app is a sample order site for a cafe, this was a project for the Harvard CS50x course.</p>
+                </div>
 
-                    <div id="project4" class="project">
-                        <h3>Chrome Extension</h3>
-                        <a href="https://github.com/A11y-Cat/ChromeExtension" class="link" target="_blank"><img class="thumbnail" src="images/extension.png" alt="extension thumbnail"></a>
-                        <h4>Tech used: HTML, CSS, Javascript</h4>
-                        <p>This is a chrome extension that allows you to add urls to your local storage in order to track leads. Please follow the instructions in the README.</p>
-                    </div>
+                <div id="project4" class="project">
+                    <h3>Chrome Extension</h3>
+                    <a href="https://github.com/A11y-Cat/ChromeExtension" class="link" target="_blank"><img class="thumbnail" src="images/extension.png" alt="extension thumbnail"></a>
+                    <h4>Tech used: HTML, CSS, Javascript</h4>
+                    <p>This is a chrome extension that allows you to add urls to your local storage in order to track leads. Please follow the instructions in the README.</p>
+                </div>
 
-                    <div id="project5" class="project">
-                        <h3>Recipe API Project</h3>
-                        <a href="https://github.com/Wee-A11y/RecipeAPIProject" class="link" target="_blank"><img class="thumbnail" src="images/CFGAPI.png" alt="extension thumbnail"></a>
-                        <h4>Tech used: Python</h4>
-                        <p>An API run on the command line which searches for recipes based on an ingredient request. The search can be filtered by calories or by an additional word and the results saved as a text document. This was a group project for the CodeFirstGirls course.</p>
-                    </div>
+                <div id="project5" class="project">
+                    <h3>Recipe API Project</h3>
+                    <a href="https://github.com/Wee-A11y/RecipeAPIProject" class="link" target="_blank"><img class="thumbnail" src="images/CFGAPI.png" alt="extension thumbnail"></a>
+                    <h4>Tech used: Python</h4>
+                    <p>An API run on the command line which searches for recipes based on an ingredient request. The search can be filtered by calories or by an additional word and the results saved as a text document. This was a group project for the CodeFirstGirls course.</p>
+                </div>
 
-                    <div id="project6" class="project">
-                        <h3>Adventure Booking Project</h3>
-                        <a href="https://github.com/Wee-A11y/RecipeAPIProject" class="link" target="_blank"><img class="thumbnail" src="images/CFG-js.png" alt="Adventure thumbnail"></a>
-                        <h4>Tech used: Javascript, React, HTML, CSS</h4>
-                        <p>This is a Javascript app, which uses React to manage state and to add components. The app allows users to select and book an adventure, which sends an email with the form entry from the user</p>
-                    </div>
+                <div id="project6" class="project">
+                    <h3>Adventure Booking Project</h3>
+                    <a href="https://github.com/Wee-A11y/RecipeAPIProject" class="link" target="_blank"><img class="thumbnail" src="images/CFG-js.png" alt="Adventure thumbnail"></a>
+                    <h4>Tech used: Javascript, React, HTML, CSS</h4>
+                    <p>This is a Javascript app, which uses React to manage state and to add components. The app allows users to select and book an adventure, which sends an email with the form entry from the user</p>
+                </div>
 
-                    <div id="project1" class="project">
-                        <h3>Power Automate</h3>
-                        <h4>Tech used: Power Automate, JSON, Excel, Forms</h4>
-                        <h5>Unit Change Process</h5>
-                        <p>When I started working at the School of Management, students were required to download/print or email unit change request. I automated the process using a Microsoft form and Power Automate, this could allow for data to be automatically stored in an Excel spreadsheet.</p>
-                        <p>Processing unit changes was a time consuming task, using Power Automate to send an adaptive card to a Teams area, where the outcome email could be sent automatically, with additional notes, to students more than halved the processing time.<p>
-                        <p>Students received an automatic email confirming their choice which reduced any additional incoming messages.<p>
-                        
-                        <h5>Extension Process</h5>
-                        <p>I created a similar process for the extension requests, however this was a more complex project as each case had to be sent to different teams, I used the switch method in Power Automate to accomplish this.<p>
-                        <p>I presented my solution to the Director of Teaching, Director of Studies and programme team, my solution was implemented and has been running for over 2 years.</p>
-                        <p>This process has reduced workload and loss of information or missed requests.</p>      
-                    </div>
-                </section>
+                <div id="project1" class="project">
+                    <h3>Power Automate</h3>
+                    <h4>Tech used: Power Automate, JSON, Excel, Forms</h4>
+                    <h5>Unit Change Process</h5>
+                    <p>When I started working at the School of Management, students were required to download/print or email unit change request. I automated the process using a Microsoft form and Power Automate, this could allow for data to be automatically stored in an Excel spreadsheet.</p>
+                    <p>Processing unit changes was a time consuming task, using Power Automate to send an adaptive card to a Teams area, where the outcome email could be sent automatically, with additional notes, to students more than halved the processing time.<p>
+                    <p>Students received an automatic email confirming their choice which reduced any additional incoming messages.<p>
+                    
+                    <h5>Extension Process</h5>
+                    <p>I created a similar process for the extension requests, however this was a more complex project as each case had to be sent to different teams, I used the switch method in Power Automate to accomplish this.<p>
+                    <p>I presented my solution to the Director of Teaching, Director of Studies and programme team, my solution was implemented and has been running for over 2 years.</p>
+                    <p>This process has reduced workload and loss of information or missed requests.</p>      
+                </div>
+            </section>
+
+            <script>
+                // Hamburger menu toggle
+                const hamburger = document.querySelector('.hamburger');
+                const navList = document.querySelector('.nav-list');
+                hamburger.addEventListener('click', function() {
+                    navList.classList.toggle('open');
+                    document.body.classList.toggle('menu-open');
+                    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+                    hamburger.setAttribute('aria-expanded', !expanded);
+                });
+                // Fade-out navigation
+                document.querySelectorAll('a').forEach(link => {
+                    if (
+                        link.hostname === window.location.hostname &&
+                        !link.href.includes('#') &&
+                        link.getAttribute('target') !== '_blank'
+                    ) {
+                        link.addEventListener('click', function(e) {
+                            if (navList.classList.contains('open')) {
+                                navList.classList.remove('open');
+                                document.body.classList.remove('menu-open');
+                            }
+                            e.preventDefault();
+                            document.body.classList.add('fade-out');
+                            setTimeout(() => {
+                                window.location = link.href;
+                            }, 500);
+                        });
+                    }
+                });
+            </script>
         </body>
     </html>
 </DOCTYPE>

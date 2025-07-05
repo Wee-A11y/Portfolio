@@ -13,17 +13,23 @@
 
         <body>
           <header>
-            <h1 id="header" class="navName"><a class="link" href="index.html">Allison McHugh</a></h1>
+            <h1 id="header" class="navName"><a class="name-link" href="index.html">Allison McHugh</a></h1>
             <nav id="navbar" class="nav">
-                <ul class="nav-list">
-                    <li><a class="nav-link" href="index.html">Home</a></li>
-                    <li><a class="nav-link" href="about.html">About Me</a></li>
-                    <li><a class="nav-link"  href="projects.html">Projects</a></li>
-                    <li><a class="nav-link" href="work.html">Work Experience</a></li>
-                  </ul>
+              <ul class="nav-list" id="nav-list">
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="about.html">About Me</a></li>
+                <li><a class="nav-link" href="work.html">Work Experience</a></li>
+                <li><a class="nav-link" href="projects.html">Projects</a></li>
+              </ul>
+              <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-list">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
             </nav>
           </header>
-              <section class="certification">
+              <a id="certifications"></a>
+              <section id="certifications">
                 <h2 class="top">CodeFirstGirls Certifications</h2>
                 <ul>
                   <li id="cert">Introduction to Python & Apps <a id="link" target="_blank" href="Certifications/Intro to Python & Apps.pdf">Certificate</a></li>
@@ -53,3 +59,35 @@
         </body>
     </html>
 </DOCTYPE>
+
+<script>
+  // Hamburger menu toggle
+  const hamburger = document.querySelector('.hamburger');
+  const navList = document.querySelector('.nav-list');
+  hamburger.addEventListener('click', function() {
+    navList.classList.toggle('open');
+    document.body.classList.toggle('menu-open');
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', !expanded);
+  });
+  // Fade-out navigation
+  document.querySelectorAll('a').forEach(link => {
+    if (
+      link.hostname === window.location.hostname &&
+      !link.href.includes('#') &&
+      link.getAttribute('target') !== '_blank'
+    ) {
+      link.addEventListener('click', function(e) {
+        if (navList.classList.contains('open')) {
+          navList.classList.remove('open');
+          document.body.classList.remove('menu-open');
+        }
+        e.preventDefault();
+        document.body.classList.add('fade-out');
+        setTimeout(() => {
+          window.location = link.href;
+        }, 500);
+      });
+    }
+  });
+</script>

@@ -13,15 +13,20 @@
 
         <body>
           <header>
-            <h1 id="header" class="navName"><a class="link" href="index.html">Allison McHugh</a></h1>
+            <h1 id="header" class="navName"><a class="name-link" href="index.html">Allison McHugh</a></h1>
             <nav id="navbar" class="nav">
-              <ul class="nav-list">
+              <ul class="nav-list" id="nav-list">
                 <li><a class="nav-link" href="index.html">Home</a></li>
-                <li><a class="nav-link"  href="projects.html">Projects</a></li>
+                <li><a class="nav-link" href="projects.html">Projects</a></li>
                 <li><a class="nav-link" href="certifications.html">Certifications</a></li>
                 <li><a class="nav-link" href="work.html">Work Experience</a></li>
               </ul>
-          </nav>
+              <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-list">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </nav>
           </header>         
 
               <section id="about" class="about">
@@ -38,13 +43,13 @@
                 <h2>Courses</h2>
                   <div class="courses">
                     <h3>Harvard</h3>
-                    <h4>31st August 2022 - 10th November 2022</h4>
-                    <h5>CS50X Introduction to Computer Science</h5>
+                    <h5>November 2022</h4>
+                    <h4>CS50X Introduction to Computer Science</h5>
                   </div>
                   <div class="courses">
                     <h3>CodeGirlsFirst</h3>
-                    <h4>29th September 2022 - 17th November 2022</h4>
-                    <h5>Introduction to Python & Apps</h5>
+                    <h5>November 2022</h4>
+                    <h4>Introduction to Python & Apps</h5>
                   </div>
               </section>
 
@@ -52,13 +57,13 @@
                 <h2>Education</h2>
                 <div>
                   <h3>Duncan of Jordanstone College of Art & Design</h3>
-                  <h4>September 2011 - June 2015</h4>
-                  <h5>BA Honours Fine Art Degree 2:1</h5>
+                  <h5>September 2011 - June 2015</h4>
+                  <h4>BA Honours Fine Art Degree 2:1</h5>
                 </div>
                 
                 <div>
                   <h3>Dundee and Angus College</h3>
-                  <h4>September 2010 - June 2011</h4>
+                  <h5>September 2010 - June 2011</h4>
                 </div>
               </section>
 
@@ -87,6 +92,38 @@
                   </a>
                 </div>
               </section>
+
+              <script>
+                // Hamburger menu toggle
+                const hamburger = document.querySelector('.hamburger');
+                const navList = document.querySelector('.nav-list');
+                hamburger.addEventListener('click', function() {
+                  navList.classList.toggle('open');
+                  document.body.classList.toggle('menu-open');
+                  const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+                  hamburger.setAttribute('aria-expanded', !expanded);
+                });
+                // Fade-out navigation
+                document.querySelectorAll('a').forEach(link => {
+                  if (
+                    link.hostname === window.location.hostname &&
+                    !link.href.includes('#') &&
+                    link.getAttribute('target') !== '_blank'
+                  ) {
+                    link.addEventListener('click', function(e) {
+                      if (navList.classList.contains('open')) {
+                        navList.classList.remove('open');
+                        document.body.classList.remove('menu-open');
+                      }
+                      e.preventDefault();
+                      document.body.classList.add('fade-out');
+                      setTimeout(() => {
+                        window.location = link.href;
+                      }, 500);
+                    });
+                  }
+                });
+              </script>
         </body>
     </html>
 </DOCTYPE>

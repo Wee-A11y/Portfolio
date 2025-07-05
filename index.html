@@ -16,21 +16,44 @@
           <header id="homepage">
             
             <nav id="navbar" class="nav home">
-              <ul class="nav-list" id="home">
-                <li><a class="nav-link" href="about.html" id="about">About Me</a></li>
-                <li><a class="nav-link" href="work.html" id="work">Work Experience</a></li>
-                <li><a class="nav-link"  href="projects.html" id="project">Projects</a></li>
-                <li><a class="nav-link" href="certifications.html" id="certification">Certifications</a></li>
+              <ul class="nav-list" id="nav-list">
+                <li><a class="nav-link" href="about.html">About</a></li>
+                <li><a class="nav-link" href="work.html">Work</a></li>
+                <li><a class="nav-link" href="projects.html">Projects</a></li>
+                <li><a class="nav-link" href="certifications.html">Certifications</a></li>
               </ul>
-          </nav>
+              <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-list">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </nav>
           </header>         
 
-              <section id="index" class="title">
-                <div class="details">
-                    <h1 class="nm" id="title">Allison McHugh</h1>
-                    <h2 id="role">Junior  Developer</h2>
-                </div>
-              </section>
+              <div class="main-scroll-container">
+                <section class="snap-section" id="home">
+                  <div class="details">
+                      <h1 class="nm" id="title">Allison McHugh</h1>
+                      <h2 id="role">Junior Developer</h2>
+                  </div>
+                </section>
+
+                <section class="snap-section" id="about">
+                  <!-- About content here -->
+                </section>
+
+                <section class="snap-section" id="work">
+                  <!-- Work content here -->
+                </section>
+
+                <section class="snap-section" id="projects">
+                  <!-- Projects content here -->
+                </section>
+
+                <section class="snap-section" id="certifications">
+                  <!-- Certifications content here -->
+                </section>
+              </div>
 
               <section id="socials" class="socials">
                 <div class="social-icons">
@@ -57,6 +80,38 @@
                   </a>
                 </div>
               </section>
+
+<script>
+  // Hamburger menu toggle
+  const hamburger = document.querySelector('.hamburger');
+  const navList = document.querySelector('.nav-list');
+  hamburger.addEventListener('click', function() {
+    navList.classList.toggle('open');
+    document.body.classList.toggle('menu-open');
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', !expanded);
+  });
+  // Fade-out navigation
+  document.querySelectorAll('a').forEach(link => {
+    if (
+      link.hostname === window.location.hostname &&
+      !link.href.includes('#') &&
+      link.getAttribute('target') !== '_blank'
+    ) {
+      link.addEventListener('click', function(e) {
+        if (navList.classList.contains('open')) {
+          navList.classList.remove('open');
+          document.body.classList.remove('menu-open');
+        }
+        e.preventDefault();
+        document.body.classList.add('fade-out');
+        setTimeout(() => {
+          window.location = link.href;
+        }, 500);
+      });
+    }
+  });
+</script>
         </body>
     </html>
 </DOCTYPE>
